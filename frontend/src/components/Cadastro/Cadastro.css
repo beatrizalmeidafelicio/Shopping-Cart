@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Formatação do título */
+h1 {
+    margin: 20px 0;   
+    color: #ffffff;
+    font-family: 'URW Chancery L', cursive;
+}
+
+/* Tela de fundo */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
+    font-family: 'URW Chancery L', cursive;
+}
+
+/* As caixinhas de nome, email e tals, formatado */
+.box {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgb(235, 235, 235); /* Cor branca translúcida */
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    backdrop-filter: blur(10px); /* Desfoque de fundo */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda translúcida */
+    text-align: center;
+}
+
+.cadastro{
+    color: rgb(61, 53, 53);
+    font-family: 'URW Chancery L', cursive;
+}
+
+.box i {
+    font-size: 50px; /* Tamanho do ícone */
+    color: rgb(0, 114, 214); /* Cor do ícone */
+    margin-bottom: 20px; /* Espaço abaixo do ícone */
+}
+
+form {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Formatação do nome escrito nos input */
+input {
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+    padding: 0 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda translúcida */
+    background: rgba(255, 255, 255, 0.1); /* Fundo branco translúcido */
+    color: rgb(0, 0, 0);
+}
+
+/* Formatação do botão */
+button {
+    width: 150px;
+    height: 25px;
+    background-color: rgb(43, 169, 219);
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s; /* Adiciona transição suave */
+}
+
+button:hover {
+    background-color: rgba(245, 245, 245, 0); /* Cor de fundo muda ao passar o mouse */
+}
+
+button:active {
+    background-color: rgba(199, 44, 186, 0); /* Cor de fundo muda ao pressionar */
+    transform: scale(0.95); /* Efeito de "pressionado" */
+}
