@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Cadastro.css';
+import axios from 'axios';
 
 const Cadastro = () => {
   const navigate = useNavigate();
@@ -8,7 +9,7 @@ const Cadastro = () => {
   useEffect(() => {
     const formulario = document.querySelector('form');
 
-    const cadastrar = (event) => {
+    const cadastrar = async (event) => {
       event.preventDefault();
 
       const Inome = document.querySelector('.nome');
@@ -44,15 +45,15 @@ const Cadastro = () => {
         telefone: Itelefone.value.trim(),
       };
 
-      let usuariosCadastrados = JSON.parse(localStorage.getItem('usuarios')) || [];
-      usuariosCadastrados.push(usuario);
-
-      localStorage.setItem('usuarios', JSON.stringify(usuariosCadastrados));
-
-      console.log('Usuário cadastrado localmente:', usuario);
-      limpar();
-      console.log('Redirecionando para /home');
-      navigate('/home'); // redireciona para a página principal
+      try {
+        // Faz a requisição para a sua API
+        await axios.post('http://localhost:8080/api/cadastro/checkout', usuario);
+        console.log('Usuário cadastrado na API:', usuario);
+        limpar();
+        navigate('/home');
+      } catch (error) {
+        console.error('Erro ao cadastrar usuário:', error);
+      }
     };
 
     const limpar = () => {
