@@ -8,31 +8,31 @@ function Modal({ onClose, discount, finalPrice, cartItems, totalPrice }) { // De
   console.log('Modal props:', { discount, finalPrice, cartItems, totalPrice }); // Loga as propriedades recebidas no console
 
   return (
-    <div className="modal-overlay"> // Div principal para a sobreposição do modal
-      <div className="modal-content"> // Div principal para o conteúdo do modal
-        <button className="modal-close-button" onClick={onClose}> // Botão para fechar o modal
+    <div className="modal-overlay"> 
+      <div className="modal-content"> 
+        <button className="modal-close-button" onClick={onClose}> 
           &times; // Texto do botão (símbolo de fechar)
         </button>
-        <div className="cart-modal-items"> // Div para listar os itens do carrinho
-          {cartItems.map((cartItem) => ( // Mapeia os itens do carrinho para exibi-los
-            <div key={cartItem.id} className="cart-modal-item"> // Div para cada item do carrinho, com chave única
-              <span>{cartItem.name}</span> // Exibe o nome do item
-              <span>{formatCurrency(cartItem.price, 'BRL')}</span> // Exibe o preço do item formatado
+        <div className="cart-modal-items"> 
+          {cartItems.map((cartItem) => ( 
+            <div key={cartItem.id} className="cart-modal-item"> 
+              <span>{cartItem.name}</span> 
+              <span>{formatCurrency(cartItem.price, 'BRL')}</span> 
             </div>
           ))}
         </div>
-        <div className="cart-modal-summary"> // Div para o resumo do carrinho
-          <div className="cart-modal-total"> // Div para o total do carrinho
+        <div className="cart-modal-summary"> 
+          <div className="cart-modal-total"> 
             <span>Total:</span>
-            <span>{formatCurrency(totalPrice, 'BRL')}</span> // Exibe o preço total formatado
+            <span>{formatCurrency(totalPrice, 'BRL')}</span> 
           </div>
-          <div className="cart-modal-discount"> // Div para o desconto aplicado
+          <div className="cart-modal-discount"> 
             <span>Desconto:</span>
-            <span>{formatCurrency(discount, 'BRL')}</span> // Exibe o desconto formatado
+            <span>{formatCurrency(discount, 'BRL')}</span> 
           </div>
-          <div className="cart-modal-final"> // Div para o preço final após desconto
+          <div className="cart-modal-final"> 
             <span>Preço Final:</span>
-            <span>{formatCurrency(finalPrice, 'BRL')}</span> // Exibe o preço final formatado
+            <span>{formatCurrency(finalPrice, 'BRL')}</span> 
           </div>
         </div>
       </div>

@@ -17,23 +17,23 @@ function CartItem({ data }) { // Define o componente funcional CartItem que rece
   };
 
   return (
-    <section className="cart-item"> // Seção que representa um item no carrinho
+    <section className="cart-item"> 
       <img
         src={thumbnail}
         alt="imagem do produto"
-        className="cart-item-image" // Renderiza a imagem do produto com uma classe CSS para estilização
+        className="cart-item-image" 
       />
 
       <div className="cart-item-content">
-        <h3 className="cart-item-title">{title}</h3> // Renderiza o título do produto
-        <h3 className="cart-item-price">{formatCurrency(price, 'BRL')}</h3> // Renderiza o preço do produto formatado em BRL
+        <h3 className="cart-item-title">{title}</h3> 
+        <h3 className="cart-item-price">{formatCurrency(price, 'BRL')}</h3> 
 
         <button
           type="button"
-          className="button__remove-item" // Botão para remover o item do carrinho
-          onClick={ handleRemoveItem } // Chama handleRemoveItem ao ser clicado
+          className="button__remove-item" 
+          onClick={ handleRemoveItem } 
         >
-          <BsCartDashFill /> // Ícone de remoção de item
+          <BsCartDashFill /> 
         </button>
       </div>
     </section>
@@ -42,6 +42,6 @@ function CartItem({ data }) { // Define o componente funcional CartItem que rece
 
 export default CartItem; // Exporta o componente CartItem como padrão
 
-CartItem.propTypes = { // Define propTypes para validação de propriedades
-  data: propTypes.object.isRequired // data deve ser um objeto e é obrigatório
+CartItem.propTypes = { 
+  data: propTypes.object.isRequired 
 };
