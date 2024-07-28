@@ -1,10 +1,10 @@
-import React from 'react';
-import { BiLoaderAlt } from 'react-icons/bi';
+import React from 'react'; // Importa React para criar componentes
+import { BiLoaderAlt } from 'react-icons/bi'; // Importa o ícone de carregamento BiLoaderAlt da biblioteca react-icons
 
-import './Loading.css';
+import './Loading.css'; // Importa o arquivo CSS para estilização do componente
 
-function Loading() {
-  return <BiLoaderAlt className="loading" />;
+function Loading() { // Define o componente funcional Loading
+  return <BiLoaderAlt className="loading" />; // Renderiza o ícone BiLoaderAlt com a classe CSS "loading"
 }
 
-export default Loading;
+export default Loading; // Exporta o componente Loading como padrão

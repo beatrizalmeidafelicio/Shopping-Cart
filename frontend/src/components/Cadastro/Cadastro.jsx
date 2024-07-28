@@ -1,23 +1,26 @@
+import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Cadastro.css';
-import axios from 'axios';
 
+// Componente funcional Cadastro
 const Cadastro = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Hook para navegação
 
+  // Hook useEffect para adicionar e remover event listener no formulário
   useEffect(() => {
     const formulario = document.querySelector('form');
 
+    // Função assíncrona para lidar com o envio do formulário
     const cadastrar = async (event) => {
-      event.preventDefault();
+      event.preventDefault(); // Previne o comportamento padrão de submit do formulário
 
       const Inome = document.querySelector('.nome');
       const Iemail = document.querySelector('.email');
       const Isenha = document.querySelector('.senha');
       const Itelefone = document.querySelector('.telefone');
 
-      // Validação do nome (letras de A a Z)
+      // Validação do nome (apenas letras de A a Z)
       const nomeValido = /^[a-zA-Z]+$/.test(Inome.value.trim());
       if (!nomeValido) {
         alert('Nome deve conter apenas letras de A a Z.');
@@ -38,6 +41,7 @@ const Cadastro = () => {
         return;
       }
 
+      // Cria o objeto usuário com os dados do formulário
       const usuario = {
         nome: Inome.value.trim(),
         email: Iemail.value.trim(),
@@ -46,22 +50,25 @@ const Cadastro = () => {
       };
 
       try {
-        // Faz a requisição para a sua API
+        // Faz a requisição para a API
         await axios.post('http://localhost:8080/api/cadastro/checkout', usuario);
         console.log('Usuário cadastrado na API:', usuario);
-        limpar();
-        navigate('/home');
+        limpar(); // Limpa o formulário após o cadastro
+        navigate('/home'); // Navega para a página home após o cadastro
       } catch (error) {
         console.error('Erro ao cadastrar usuário:', error);
       }
     };
 
+    // Função para limpar o formulário
     const limpar = () => {
       formulario.reset();
     };
 
+    // Adiciona o event listener de submit ao formulário
     formulario.addEventListener('submit', cadastrar);
 
+    // Remove o event listener quando o componente é desmontado
     return () => {
       formulario.removeEventListener('submit', cadastrar);
     };
