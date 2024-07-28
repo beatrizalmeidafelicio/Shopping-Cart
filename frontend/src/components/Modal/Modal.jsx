@@ -11,7 +11,7 @@ function Modal({ onClose, discount, finalPrice, cartItems, totalPrice }) { // De
     <div className="modal-overlay"> 
       <div className="modal-content"> 
         <button className="modal-close-button" onClick={onClose}> 
-          &times; // Texto do botão (símbolo de fechar)
+          &times; 
         </button>
         <div className="cart-modal-items"> 
           {cartItems.map((cartItem) => ( 
