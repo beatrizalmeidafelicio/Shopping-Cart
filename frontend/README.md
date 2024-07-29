@@ -30,7 +30,7 @@ Este é um projeto de carrinho de compras desenvolvido com React JS. Ele permite
 
 - propTypes: funcionalidade do React que permite validar os tipos de propriedades passadas para componentes, que ajuda a garantir que os componentes recebam os tipos de dados esperados, melhorando a legibilidade do código. Foi usado no CartItem: (propTypes.object.isRequired é usado para garantir que a propriedade data passada ao componente CartItem seja um objeto e que seja obrigatória); e no ProductCard: (propTypes.shape é utilizado para definir que a propriedade data deve ser um objeto com uma forma específica. Especificamente, o objeto data deve conter as propriedades title, thumbnail, e price, com seus respectivos tipos (string e number), e todas são obrigatórias.)
 
-- Event Listeners: manipulação de eventos como o envio de formulários, feito co cadastro.
+- Event Listeners: manipulação de eventos como o envio de formulários, feito no cadastro.
 
 - useEffect: execução de efeitos colaterais, usado no Products: (é utilizado aqui para buscar produtos da API assim que o componente é montado. Ele chama fetchProducts com o termo de pesquisa 'notebook' e atualiza o estado products e loading uma vez que os dados são recebidos); e usado no Cadastro:(é utilizado aqui para adicionar e remover o evento de submissão do formulário. Quando o componente é montado, o evento submit é adicionado ao formulário para tratar o cadastro do usuário. Quando o componente é desmontado, o evento submit é removido).
 
