@@ -24,6 +24,8 @@ Este é um projeto de carrinho de compras desenvolvido com React JS. Ele permite
 
 - Axios é usado para fazer requisições HTTP e buscar dados da API.
 
+- ESLint é uma ferramenta para JavaScript e JSX (usada em projetos React), que analisa o código em busca de problemas e padrões que não seguem as regras definidas. Essas regras podem ajudar a identificar erros, potenciais bugs, inconsistências no estilo de código e outros problemas que podem ser difíceis de detectar manualmente.
+
 ## Hooks e padrões de design React
 
 - propTypes: funcionalidade do React que permite validar os tipos de propriedades passadas para componentes, que ajuda a garantir que os componentes recebam os tipos de dados esperados, melhorando a legibilidade do código. Foi usado no CartItem: (propTypes.object.isRequired é usado para garantir que a propriedade data passada ao componente CartItem seja um objeto e que seja obrigatória); e no ProductCard: (propTypes.shape é utilizado para definir que a propriedade data deve ser um objeto com uma forma específica. Especificamente, o objeto data deve conter as propriedades title, thumbnail, e price, com seus respectivos tipos (string e number), e todas são obrigatórias.)
