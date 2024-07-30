@@ -12,7 +12,17 @@ function CartItem({ data }) {
   const { id, thumbnail, title, price } = data;
 
   const handleRemoveItem = () => {
-    const updatedItems = cartItems.filter((item) => item.id != id);
+    let qtd=0;
+    function rmvItem(item){
+      if(qtd == 0){
+        if(item.id == id){
+          qtd++;
+          return false;
+        }else return true;
+      }
+      return true;
+    }
+    const updatedItems = cartItems.filter(rmvItem);
     setCartItems(updatedItems);
   };
 
