@@ -6,6 +6,8 @@ import ProductCard from '../ProductCard/ProductCard';
 import Loading from '../Loading/Loading';
 import AppContext from '../../context/AppContext';
 
+//Este código define um componente React chamado Products, que exibe uma lista de produtos ou uma animação de carregamento enquanto os dados estão sendo buscados.
+
 function Products() {
 
   const { products, setProducts, loading, setLoading } = useContext(AppContext);

@@ -1,9 +1,11 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { BsSearch } from 'react-icons/bs';
 
-import './SearchBar.css';
 import fetchProducts from '../../api/fetchProducts';
 import AppContext from '../../context/AppContext';
+import './SearchBar.css';
+
+//Este código define um componente React chamado SearchBar, que fornece uma barra de pesquisa para buscar produtos. 
 
 function SearchBar() {
 

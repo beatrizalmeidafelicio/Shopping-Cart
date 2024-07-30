@@ -6,6 +6,8 @@ import './ProductCard.css';
 import formatCurrency from '../../utils/formatCurrency';
 import AppContext from '../../context/AppContext';
 
+//Este código define um componente React chamado ProductCard, que exibe informações sobre um produto e permite adicionar o produto ao carrinho de compras.
+
 function ProductCard({ data }) {
   const { title, thumbnail, price } = data;
 

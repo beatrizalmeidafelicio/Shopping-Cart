@@ -1,8 +1,9 @@
-// src/components/Modal/Modal.js
-import React from 'react';
 import PropTypes from 'prop-types';
-import './Modal.css';
+import React from 'react';
 import formatCurrency from '../../utils/formatCurrency';
+import './Modal.css';
+
+//Este código define um componente, que exibe um modal (janela sobreposta) contendo um resumo dos itens do carrinho de compras, o desconto aplicado e o preço final. 
 
 function Modal({ onClose, discount, finalPrice, cartItems, totalPrice }) {
   console.log('Modal props:', { discount, finalPrice, cartItems, totalPrice });

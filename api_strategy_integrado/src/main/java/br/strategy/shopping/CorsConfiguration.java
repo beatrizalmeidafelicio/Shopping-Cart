@@ -4,17 +4,17 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-//tentando a conectar
-@Configuration
+@Configuration // Indica que esta é uma classe de configuração do Spring
 public class CorsConfiguration implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedMethods("GET", "POST", "PUT", "DELETE")
-                .allowedHeaders("*")
-                .exposedHeaders("Authorization", "Cache-Control", "Content-Type")
-                .maxAge(3600)
-                .allowedOrigins("*");
+        // Configura as permissões de CORS
+        registry.addMapping("/**") // Permite CORS para todos os endpoints
+                .allowedMethods("GET", "POST", "PUT", "DELETE") // Permite os métodos HTTP especificados
+                .allowedHeaders("*") // Permite todos os cabeçalhos
+                .exposedHeaders("Authorization", "Cache-Control", "Content-Type") // Exibe os cabeçalhos especificados na resposta
+                .maxAge(3600) // Define o tempo de cache das permissões de CORS para 3600 segundos
+                .allowedOrigins("*"); // Permite solicitações de qualquer origem
     }
 }
