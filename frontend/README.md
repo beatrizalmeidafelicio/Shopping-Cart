@@ -39,4 +39,3 @@ Este é um projeto de carrinho de compras desenvolvido com React JS. Ele permite
 - useState: gerenciamento de estados locais em componentes funcionais, usado no Provider:(é utilizado aqui para gerenciar estados compartilhados na aplicação, como a lista de produtos (products), itens no carrinho (cartItems), estado de carregamento (loading) e visibilidade do carrinho (isCartVisible)); e usado no SeachBar:(é utilizado aqui para gerenciar o valor do campo de busca (searchValue), permitindo que o usuário digite e atualize o estado do campo de pesquisa).
 
 
-
