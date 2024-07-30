@@ -1,18 +1,23 @@
 package br.strategy.shopping;
 
-// Classe que representa a requisição de checkout
 public class CheckoutRequest {
-
-    // Atributo privado para armazenar o totalAmount (total do valor a ser pago)
     private double totalAmount;
+    private int itemCount;
 
-    // Método getter para obter o totalAmount
+    // Getters e setters
     public double getTotalAmount() {
         return totalAmount;
     }
 
-    // Método setter para definir o totalAmount
     public void setTotalAmount(double totalAmount) {
         this.totalAmount = totalAmount;
+    }
+
+    public int getItemCount() {
+        return itemCount;
+    }
+
+    public void setItemCount(int itemCount) {
+        this.itemCount = itemCount;
     }
 }

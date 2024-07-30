@@ -1,5 +1,8 @@
 package br.strategy.shopping;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class ShoppingCart {
     private DiscountStrategy discountStrategy;
 
@@ -7,10 +10,10 @@ public class ShoppingCart {
         this.discountStrategy = discountStrategy;
     }
 
-    public double calculateFinalPrice(double totalAmount) {
-        if (discountStrategy == null) {
-            discountStrategy = new NoDiscountStrategy();
+    public double calculateFinalPrice(double totalAmount, int itemCount) {
+        if (discountStrategy != null) {
+            return discountStrategy.applyDiscount(totalAmount, itemCount);
         }
-        return discountStrategy.applyDiscount(totalAmount);
+        return totalAmount;
     }
 }
