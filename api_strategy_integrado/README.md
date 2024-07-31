@@ -15,3 +15,13 @@ As classes que manipulam o cadastro colaboram para permitir a criação, armazen
 - Composição: DiscountManager: Possui uma lista de objetos DiscountStrategy e usa essa lista para aplicar a melhor estratégia de desconto. Isso demonstra composição ao utilizar diferentes estratégias de desconto em uma única classe.
 - Objetos: criados nas classes Usuario, DadosCadastroUsuário, HighValueDiscountStrategy, ItemCountDiscountStrategy, OrderController, ShoppingCart e DiscountManager.
 
+## Dependências utilizadas
+
+- spring-boot-starter-data-jpa: Facilitar a implementação de repositórios JPA e a integração com bancos de dados.
+- spring-boot-starter-web:  inclui dependências para desenvolver aplicações web.
+- com.h2database:h2: Prover um banco de dados em memória para desenvolvimento e testes rápidos, sem a necessidade de instalar um banco de dados externo.
+- spring-boot-starter-test: Facilitar a escrita e execução de testes unitários.
+- org.projectlombok:lombok: Simplificar e reduzir a quantidade de código repetitivo, como getters, setters, construtores, e métodos.
+
+
+
