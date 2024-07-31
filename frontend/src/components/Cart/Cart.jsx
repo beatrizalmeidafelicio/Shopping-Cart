@@ -72,12 +72,13 @@ function Cart() {
     setIsModalVisible(false); // Oculta o modal
     setIsFinalizeDisabled(false); // Reabilita o botão de finalizar compra
   };
-
+  // Variável para diferenciar a key de cada CartItem
+  var id=1;
   return (
     <section className={`cart ${isCartVisible ? 'cart--active' : ''}`}> 
       <div className="cart-items">
         {cartItems.map((cartItem) => (
-          <CartItem key={cartItem.id} data={cartItem} /> 
+          <CartItem key={id++} data={cartItem} /> 
         ))}
       </div>
 
