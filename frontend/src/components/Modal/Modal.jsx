@@ -7,7 +7,7 @@ import './Modal.css';
 
 function Modal({ onClose, discount, finalPrice, cartItems, totalPrice }) {
   console.log('Modal props:', { discount, finalPrice, cartItems, totalPrice });
-
+var id=1;
   return (
     <div className="modal-overlay">
       <div className="modal-content">
@@ -16,7 +16,7 @@ function Modal({ onClose, discount, finalPrice, cartItems, totalPrice }) {
         </button>
         <div className="cart-modal-items">
           {cartItems.map((cartItem) => (
-            <div key={cartItem.id} className="cart-modal-item">
+            <div key={id++} className="cart-modal-item">
               <span>{cartItem.name}</span>
               <span>{formatCurrency(cartItem.price, 'BRL')}</span>
             </div>
